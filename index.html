@@ -27,10 +27,10 @@
         if(mail.value != '' && password.value != ''){
             alert("You Have Successfully Login");
         }
-        else if(mail.value == '' || password.value != ''){
+        else if(mail.value == '' && password.value != ''){
             alert("Enter The Mail")
         }
-        else if(mail.value != '' || password.value == ''){
+        else if(mail.value != '' && password.value == ''){
             alert("Enter The Password")
         }
         // else if(password.value == ''){
