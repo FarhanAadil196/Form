@@ -82,6 +82,21 @@ input[type="checkbox"] {
 #btn:hover {
     background-color: #008BBF;
 }
+#btn2{
+    width: 100%;
+    padding: 10px;
+    background-color: #00ADEF;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#btn2:hover {
+    background-color: #008BBF;
+}
 
 a {
     display: block;

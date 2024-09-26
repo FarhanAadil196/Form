@@ -20,34 +20,39 @@
     <div class="form-area" id="form2">
         <h3 class="form" id="login">Login</h3><h3 class="form" id="active">SignUp</h3>
         <label id="mail">Name</label>
-        <input type="text" id="mail-text" required>
+        <input type="text" id="name-text" required>
         <label id="mail">Email</label>
-        <input type="text" id="mail-text" required>
+        <input type="text" id="mail1-text" required>
         <label id="mail">Password</label>
-        <input type="password" id="mail-text" required>
+        <input type="password" id="pass1-text" required maxlength="10">
         <label id="pass">Confirm Password</label>
-        <input type="password" id="pass-text" required maxlength="10">
+        <input type="password" id="pass2-text" required maxlength="10">
         <input type="checkbox" id="check"><span id="terms">I accept the terms and conditions</span>
-        <button id="btn" type="submit">Register Now</button>
+        <button id="btn2" type="submit">Register Now</button>
     </div>
 
 </body>
 <script>
-    let mail = document.getElementById('mail-text');
-    let password = document.getElementById('pass-text');
+    let mail = document.getElementById ('mail-text');
+    let mail1 = document.getElementById ('mail1-text');
+    let name = document.getElementById ('name-text');
+    let password1 = document.getElementById('pass-text');
+    let password2 = document.getElementById('pass1-text');
+    let password3 = document.getElementById('pass2-text');
     let button = document.getElementById('btn');
+    let button1 = document.getElementById('btn2');
     let logbtn = document.getElementById('login')
     let signbtn = document.getElementById('signup')
 
 
     button.addEventListener('click', () => {
-        if(mail.value != '' && password.value != ''){
+        if(mail.value != '' && password1.value != ''){
             alert("You Have Successfully Login");
         }
-        else if(mail.value == '' && password.value != ''){
+        else if(mail.value == '' && password1.value != ''){
             alert("Enter The Mail")
         }
-        else if(mail.value != '' && password.value == ''){
+        else if(mail.value != '' && password1.value == ''){
             alert("Enter The Password")
         }
         // else if(password.value == ''){
@@ -57,7 +62,7 @@
             alert("Enter The Correct Email or Password")
         }
         mail.value = '';
-            password.value = '';
+            password1.value = '';
     }); 
     signbtn.addEventListener('click', () => {
         document.getElementById('form1').style.display="none";
@@ -68,5 +73,29 @@
         document.getElementById('form2').style.display="none";
     })
     
+    button1.addEventListener('click', () => {
+        if(mail1.value != '' && name.value != '' && password2.value != '' && password3.value != ''){
+            alert("You Have Successfully Login");
+        }
+        else if(mail1.value != '' && name.value == '' && password2.value != '' && password3.value != ''){
+            alert("Enter The Name")
+        }
+        else if(mail1.value == '' && name.value != '' && password2.value != '' && password3.value != ''){
+            alert("Enter The Mail")
+        }
+        else if(mail1.value != '' && name.value != '' && password2.value == '' && password3.value != ''){
+            alert("Enter The Password")
+        }
+        else if(mail1.value != '' && name.value != '' && password2.value != '' && password3.value == ''){
+            alert("Enter The Confirm Password")
+        }
+        else{
+            alert("Enter The Correct Email or Password")
+        }
+        mail1.value = '';
+        name.value = '';
+            password2.value = '';
+            password3.value = '';
+    })
 </script>
 </html>
