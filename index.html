@@ -48,6 +48,8 @@
     button.addEventListener('click', () => {
         if(mail.value != '' && password1.value != ''){
             alert("You Have Successfully Login");
+            mail.value = '';
+            password1.value = '';
         }
         else if(mail.value == '' && password1.value != ''){
             alert("Enter The Mail")
@@ -61,8 +63,7 @@
         else{
             alert("Enter The Correct Email or Password")
         }
-        mail.value = '';
-            password1.value = '';
+       
     }); 
     signbtn.addEventListener('click', () => {
         document.getElementById('form1').style.display="none";
@@ -76,18 +77,46 @@
     button1.addEventListener('click', () => {
         if(mail1.value != '' && name.value != '' && password2.value != '' && password3.value != ''){
             alert("You Have Successfully Login");
+            
         }
         else if(mail1.value != '' && name.value == '' && password2.value != '' && password3.value != ''){
             alert("Enter The Name")
         }
         else if(mail1.value == '' && name.value != '' && password2.value != '' && password3.value != ''){
-            alert("Enter The Mail")
+            alert("Enter The MailID")
         }
         else if(mail1.value != '' && name.value != '' && password2.value == '' && password3.value != ''){
             alert("Enter The Password")
         }
         else if(mail1.value != '' && name.value != '' && password2.value != '' && password3.value == ''){
             alert("Enter The Confirm Password")
+        }
+        else if(mail1.value != '' && name.value == '' && password2.value == '' && password3.value == ''){
+            alert("Enter The Name,Password,Confirm Password")
+        }
+        else if(mail1.value == '' && name.value != '' && password2.value == '' && password3.value == ''){
+            alert("Enter The MailID,Password,Confirm Password")
+        }
+        else if(mail1.value == '' && name.value == '' && password2.value == '' && password3.value != ''){
+            alert("Enter The MailID,Name,Password")
+        }
+        else if(mail1.value == '' && name.value == '' && password2.value != '' && password3.value == ''){
+            alert("Enter The MailID,Name, Confirm Password")
+        }
+        else if(mail1.value == '' && name.value == '' && password2.value != '' && password3.value != ''){
+            alert("Enter The MailID,Name")
+        }
+        else if(mail1.value != '' && name.value != '' && password2.value == '' && password3.value == ''){
+            alert("Enter The Password,Confirm Password")
+        }
+        else if(mail1.value != '' && name.value == '' && password2.value != '' && password3.value == ''){
+            alert("Enter The Name,Confirm Password")
+        }
+        else if(mail1.value == '' && name.value != '' && password2.value == '' && password3.value != ''){
+            alert("Enter The MailID,Password")
+        }
+        else if(mail1.value == '' && name.value != '' && password2.value != '' && password3.value == ''){
+            alert("Enter The MailID,Confirm Password")
         }
         else{
             alert("Enter The Correct Email or Password")
